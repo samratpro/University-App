@@ -1,0 +1,148 @@
+
+
+.copyright{
+    position: fixed!important;
+}
+.unlimited-access .unlimited-access-img {
+    margin: 0!important;
+}
+
+
+.app-header{
+    border-bottom: 1px solid rgb(229,234,239) !important;
+}
+
+.website-view{
+    box-shadow: 0 0 3px 0 #A9A9A9;
+    border-radius: 0!important;
+}
+.website-view li{
+    border:0px!important;
+}
+
+
+/* Dashboard */
+.row-col {
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.card-col {
+    flex: 0 0 auto;
+    width: 32.3333333333%;
+    margin-right: 20px;
+}
+
+.card-inner {
+    position: relative;
+    padding: 20px;
+    display: flex;
+    justify-content: stretch;
+    align-items: center;
+    border-radius: 6px;
+    box-shadow: rgb(0 0 0 / 4%) 0 3px 5px;
+    overflow: hidden;
+    z-index: 0;
+    color: #0d1218;
+    border:1px solid #EEEEEE!important;
+    background-color: white!important;
+}
+.card-icon {
+    width: 90px;
+    height: 90px;
+    color: #44aba8!important;
+    border:1px solid #44aba8;
+    border-radius: 6px;
+    background-color: rgba(255, 255, 255, .12);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-inline-end: 25px;
+}
+p.card-number {
+    font-size: 35px;
+    font-weight: 500;
+    margin: 0;
+}
+p.card-title {
+    margin: 0;
+}
+.card-title {
+    margin-bottom: .5rem;
+}
+
+.tools .card-icon {
+    width: 50px;
+    height: 50px;
+}
+
+.card-icon svg {
+    height: 34px;
+    width: auto;
+    fill: #47BAB7;
+}
+
+
+
+.submenu{
+    background-color:#F8F9FA!important;
+    margin-left: 10px;
+
+    line-height: auto!important;
+    border-radius: 10px;
+}
+.submenu li{
+    border-radius: 10px;
+
+    margin-top: 2px;
+}
+
+.submenu li a{
+    color: rgb(49, 49, 49);
+
+}
+
+.brand-bg{
+    background-color: #47BAB7!important;
+    color:white!important;
+}
+.active{
+    background-color: #47BAB7!important;
+    color: white!important;
+
+}
+.text-primary{
+    color: #47BAB7!important;
+}
+
+.bg-primary{
+    background-color: #47BAB7!important;
+
+}
+
+
+/* Info App */
+.form-control, .form-select{
+    border:1px solid #bdbdbd!important;
+}
+#generateTitleButton{
+    transition: 0.5s!important;
+}
+#generateTitleButton:hover{
+    background-color: #399794!important;
+}
+
+
+
+
+body{
+    background-color: #F4F9FE !important;
+}
+
+
+/* Centering the table contents */
+.table-container {
+    text-align: center;
+}
+
+

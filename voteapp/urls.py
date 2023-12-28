@@ -9,7 +9,8 @@ from django.contrib.auth import views as auth_views
 urlpatterns = [
 
 
-    path('vote', views.vote, name='vote'),   
+    path('submit-vote', views.submit_vote, name='submit_vote'),   
+    path('vote-results', views.vote_results, name='vote_results'),   
     
 ]
 

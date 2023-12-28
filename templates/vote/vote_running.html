@@ -1,0 +1,22 @@
+{% extends 'dashboard.html' %}
+{% load static %}
+{% block dashcontent %}
+        
+<div class="container rounded mb-5" style="height: 500px;">
+    <div class="row">
+       
+        <h1 class="h1 mt-4"> Vote is running </h1>
+
+        <div class="alert alert-primary fs-5 mt-4 text-dark" role="alert">
+            Please wait.. <br> Result will publish after : <span class="text-danger fs-6 mt-2 text-bold"> {{existing_vote.end_date}}</span> 
+        </div>
+
+
+    </div>
+</div>
+
+
+
+{% endblock dashcontent %}
+
+

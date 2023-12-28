@@ -44,6 +44,24 @@
                 </span>
                 <span>CR Vote</span>
               </a>
+              <ul class="collapse submenu" id="info" >
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="{% url "submit_vote" %}">
+                    <span>
+                      <i class="ti ti-check"></i>
+                    </span> 
+                    <span>Submit Vote</span> 
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="{% url "vote_results" %}">
+                    <span>
+                      <i class="ti ti-align-center"></i>
+                    </span> 
+                    <span>Vote Result</span> 
+                  </a>
+                </li>
+              </ul>
             </li>
            
             <!-- http://thetheme.io/theadmin/content/icons-themify.html -->
@@ -130,6 +148,15 @@
 
         {% endblock dashcontent %}
       </div> <!--  Body End -->
+
+      <footer class="bg-body-tertiary text-center text-lg-start">
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+          © Develop by 
+          <a class="text-body" style="border-bottom:1px solid #47BAB7;" href="https://github.com/samratpro">Samrat Biswas</a> (KKBAU, CSE)
+        </div>
+        <!-- Copyright -->
+      </footer>
 
     </div>  <!--  Main wrapper -->
 

@@ -160,7 +160,7 @@ def forget_password_confirm(request, forget_code):
 
 def logout(request):
     auth.logout(request)
-    return redirect('/')
+    return redirect('login')
 
 
 

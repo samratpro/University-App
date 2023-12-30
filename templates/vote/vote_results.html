@@ -5,8 +5,32 @@
 <div class="container rounded mb-5" style="height: 500px;">
     <div class="row">
        
-        <h1> Vote Result </h1>
+        <h1 class="h1 mt-4"> Vote Result </h1>
 
+        <div class="mt-4">
+            <table class="table bg-white border rounded" style="border-color: #DEE2E7;">
+                <thead>
+                  <tr>
+                    <th class="count-column" style="width: 40px;">Count</th>
+                    <th>Profile Image</th>
+                    <th>Student Name</th>
+                    <th>Votes Received</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    {% for student in all_students %}
+                        <tr class="mt-2">
+                            <td class="p-0 px-3 align-middle text-center" style="width: 40px;">{{ forloop.counter }}</td>
+                            <td class="p-0 px-2 align-middle" style="width: 150px;">
+                                <img class="rounded-circle align-middle my-1" style="height: 50px; width: 50px; object-fit: cover;" width="50px" src="{% if student.profile_image %}{{student.profile_image.url}}{% else %}{% static "images/profile/user.png" %}{% endif %}" alt="{{ student.first_name }}'s Profile Image" height="50">  
+                            </td>
+                            <td class="p-0 px-2 align-middle">{{ student.first_name }} {{ student.last_name }}</td>
+                            <td class="p-0 px-2 align-middle text-center" style="width: 150px;">{{ student.total_votes }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+              </table>
+        </div>
 
     </div>
 </div>

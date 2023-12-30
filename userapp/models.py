@@ -15,10 +15,10 @@ class Logo(models.Model):
         return 'Logo'
     
 
-class Deperment(models.Model):
-    deperment_name = models.CharField(max_length=50, blank=True, null=True)
+class Department(models.Model):
+    department_name = models.CharField(max_length=50, blank=True, null=True)
     def __str__(self):
-        return self.deperment_name
+        return self.department_name
 
 
 class Semester(models.Model):
@@ -66,7 +66,7 @@ class AppUser(AbstractUser):
     REQUIRED_FIELDS = []  
     activation_code = models.CharField(max_length=50, blank=True, null=True)
     password_reset_code = models.CharField(max_length=50, blank=True, null=True)
-    deperment = models.ForeignKey(Deperment, on_delete=models.SET_NULL, blank=True, null=True)
+    department = models.ForeignKey(Department, on_delete=models.SET_NULL, blank=True, null=True)
     semester = models.ForeignKey(Semester, on_delete=models.SET_NULL, blank=True, null=True)
     admission_year =  models.CharField(default="2023", max_length=4, blank=True, null=True)
     profile_image = models.ImageField(upload_to='profile_images/', blank=True, null=True)

@@ -5,12 +5,23 @@
 <div class="container rounded mb-5" style="height: 500px;">
     <div class="row">
        
-        <h1 class="h1 mt-4"> Vote is running </h1>
+        <h1 class="h1 mt-4 ms-1"> Vote is running </h1>
 
-        <div class="alert alert-primary fs-5 mt-4 text-dark" role="alert">
-            Please wait.. <br> Result will publish after : <span class="text-danger fs-6 mt-2 text-bold"> {{existing_vote.end_date}}</span> 
+        <div>
+            <div class="card card-margin pt-4 mt-4">
+                <div class="card-body pt-0">
+                    <div class="widget-49">
+                        <div class="widget-49-title-wrapper">
+                            <div class="widget-49-meeting-info">
+                                <span class="widget-49-pro-title d-block fs-5 my-2">Please wait until finish voting time.</span>
+                                <span class="widget-49-pro-title d-block fs-5 my-2">End time : {{existing_vote.end_date}}</span>
+                                <span class="widget-49-pro-title d-block fs-5 my-2">Vote Created : {{existing_vote.vote_created_by.first_name}} {{existing_vote.vote_created_by.last_name}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-
 
     </div>
 </div>

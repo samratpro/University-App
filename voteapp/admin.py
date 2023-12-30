@@ -5,3 +5,4 @@ from .models import *
 
 
 admin.site.register(Vote)
+admin.site.register(VoteRecord)

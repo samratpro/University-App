@@ -9,7 +9,7 @@ admin.site.site_header = 'University App'
 
 
 admin.site.register(Logo)
-admin.site.register(Deperment)
+admin.site.register(Department)
 admin.site.register(Semester)
 
 # Custom Admin View for User Management
@@ -28,7 +28,7 @@ class AppUserAdmin(UserAdmin):
             'fields': ('is_active', 'is_staff', 'is_superuser', 'groups', 'user_permissions'),
         }),
         ('Important dates', {'fields': ('last_login', 'date_joined')}),
-        ('Custom Fields', {'fields': ('activation_code', 'password_reset_code', 'deperment', 'semester', 'admission_year', 'profile_image')}),
+        ('Custom Fields', {'fields': ('activation_code', 'password_reset_code', 'department', 'semester', 'admission_year', 'profile_image')}),
     )
 
     add_fieldsets = (

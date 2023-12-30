@@ -168,9 +168,9 @@ def logout(request):
 @login_required(login_url='login/')
 def profile(request):
     user_profile = AppUser.objects.get(email=request.user.email)
-    all_deparment = Deperment.objects.all()
+    all_department = Department.objects.all()
     all_semseter = Semester.objects.all()
-    context = {'user_profile': user_profile, 'all_deparment': all_deparment, 'all_semseter': all_semseter}
+    context = {'user_profile': user_profile, 'all_department': all_department, 'all_semseter': all_semseter}
 
     if request.method == 'POST':
         profile_image = request.FILES.get('img_upload')
@@ -178,14 +178,14 @@ def profile(request):
         last_name = request.POST.get('last_name')
         email = request.POST.get('email')
         admission_year = request.POST.get('admission_year')
-        deparment_id = request.POST.get('deparment')
+        department_id = request.POST.get('department')
         semester_id = request.POST.get('semester')
         password1 = request.POST.get('password')
         password2 = request.POST.get('password')
 
-        if deparment_id:
-            deparment_instance = get_object_or_404(Deperment, id=deparment_id)
-            user_profile.deperment = deparment_instance
+        if department_id:
+            department_instance = get_object_or_404(Department, id=department_id)
+            user_profile.department = department_instance
             user_profile.save()
 
         if semester_id:

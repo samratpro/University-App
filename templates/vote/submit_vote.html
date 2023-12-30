@@ -2,12 +2,42 @@
 {% load static %}
 {% block dashcontent %}
         
-<div class="container rounded mb-5" style="height: 500px;">
-    <div class="row">
+<div class="container rounded mb-5" style="height: 700px;">
+    <div class="row col-lg-6">
 
-        <h1 class="h1 mt-4"> Submit Your Vote</h1>
-        <span  class="alert alert-secondary fs-4 mt-2" role="alert">  You can vote yourself or anyone. Your vote is confidential, anyone can't see your information </span>
-       
+        <h1 class="h1 mt-4 mb-4 ms-1"> Submit Your Vote</h1>
+        <div class="container">
+            <div class="row">
+                <div>
+                    <div class="card card-margin">
+                        <div class="card-header no-border">
+                            <h5 class="card-title">Warning</h5>
+                        </div>
+                        <div class="card-body pt-0">
+                            <div class="widget-49">
+                                <div class="widget-49-title-wrapper">
+                                    <div class="widget-49-meeting-info">
+                                        <span class="widget-49-pro-title d-block">You can vote yourself or anyone.</span>
+                                        <span class="widget-49-meeting-time d-block">Your vote is confidential, anyone can't see your information.</span>
+                                        <span class="widget-49-meeting-time d-block">And you change your vote later.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <form method="POST" class="mb-5">
+                    {% csrf_token %}
+                    <label for="voted_for" class="h4">Select a student or Yourself:</label>
+                    <select name="voted_for" id="voted_for" class="form-select form-select-lg mb-3" aria-label="Default select example">
+                        {% for user in users %}
+                            <option value="{{user.id}}">{{ user.first_name }} {{ user.last_name }}</option>
+                        {% endfor %}
+                    </select>
+                    <button class="btn btn-primary btn-lg px-5" type="submit">Vote</button>
+                </form>
+
     </div>
 </div>
 
